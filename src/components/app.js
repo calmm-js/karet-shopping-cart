@@ -25,7 +25,7 @@ export default ({state, cart = state.lens("cart", L.define([]))}) =>
         <Items Item={ProductItem(cart)} items={Atom(products)}/>
       </div>
       <div className="panel">
-        <h2>Shopping List</h2>
+        <h2>Shopping Cart</h2>
         <Items Item={CartItem} items={cart}/>
       </div>
     </div>
