@@ -1,12 +1,7 @@
-import React from "karet"
-import K, {
-  Idx,
-  fromIds
-} from "karet.util"
+import React             from "karet"
+import K, {fromIds, idx} from "karet.util"
 
 import * as U from "../shared/util"
-
-const idx = id => (x, i) => new Idx(x[id], i)
 
 export default ({items, Item}) =>
   <ul>
