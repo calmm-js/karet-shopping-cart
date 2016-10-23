@@ -5,7 +5,7 @@ import Counter from "./counter"
 import Remove  from "./remove"
 
 const cartCount =
-  P(L.choose(({count: _, ...rest} = {}) => L.defaults({count: 0, ...rest})),
+  P(L.choose((props = {}) => L.defaults({...props, count: 0})),
     "count")
 
 export default ({item}) =>
