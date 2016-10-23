@@ -1,0 +1,7 @@
+.panels {
+  display: flex;
+}
+.panels .panel {
+  margin: 0 10px;
+  display: inline-block;
+}
