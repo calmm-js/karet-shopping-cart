@@ -6,13 +6,12 @@ import React     from "karet"
 import Counter from "./counter"
 
 const name = U.view("name")
-const count = (item, cart) =>
+const count = U.staged(item =>
   U.view(P(L.find(R.whereEq({id: item.id})),
            L.defaults(item),
            "count",
            L.defaults(0),
-           L.normalize(R.max(0))),
-         cart)
+           L.normalize(R.max(0)))))
 
 export default cart => ({item}) =>
   <li>
