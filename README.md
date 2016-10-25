@@ -2,7 +2,7 @@
 
 Prebuilt site: [Shopping Cart](http://calmm-js.github.io/karet-shopping-cart/)
 
-Editable version with WebpackBin: [Shopping Cart](http://www.webpackbin.com/VkyLjpL1M)
+Editable version with WebpackBin: [Shopping Cart](http://www.webpackbin.com/V1BV2p_Jf)
 
 To try locally:
 
