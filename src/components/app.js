@@ -1,6 +1,6 @@
-import * as L from "partial.lenses"
-import Atom   from "kefir.atom"
-import React  from "karet"
+import * as U    from "karet.util"
+import P, * as L from "partial.lenses"
+import React     from "karet"
 
 import CartItem    from "./cart-item"
 import Items       from "./items"
@@ -15,14 +15,14 @@ const products = [
   {id: 6, name: "Suklainen Japanilainen viihdyttäjä 37g"},
 ]
 
-export default ({state, cart = state.lens("cart", L.define([]))}) =>
+export default ({state, cart = U.view(P("cart", L.define([])), state)}) =>
   <div>
     <h1>Karet (toy) Shopping Cart example</h1>
     <a href="https://github.com/calmm-js/karet-shopping-cart">GitHub</a>
     <div className="panels">
       <div className="panel">
         <h2>Products</h2>
-        <Items Item={ProductItem(cart)} items={Atom(products)}/>
+        <Items Item={ProductItem(cart)} items={products}/>
       </div>
       <div className="panel">
         <h2>Shopping Cart</h2>

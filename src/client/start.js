@@ -1,11 +1,9 @@
-import "../shared/monkey"
-
-import Atom     from "kefir.atom"
+import * as U   from "karet.util"
 import React    from "karet"
 import ReactDOM from "react-dom"
 
 import App from "../components/app"
 
-export const state = Atom({})
+export const state = U.atom({})
 
 ReactDOM.render(<App {...{state}}/>, document.getElementById("app"))

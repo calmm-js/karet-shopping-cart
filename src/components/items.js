@@ -1,10 +1,10 @@
-import React             from "karet"
-import K, {fromIds, idx} from "karet.util"
-
-import * as U from "../shared/util"
+import * as U from "karet.util"
+import React  from "karet"
 
 export default ({items, Item}) =>
   <ul>
-    {fromIds(K(items, U.mapi(idx("id"))), ix =>
-             <Item key={ix.id} item={items.lens(ix.index)}/>)}
+    {U.seq(items,
+           U.mapIndexed(U.idx("id")),
+           U.mapCached(ix =>
+             <Item key={ix.id} item={U.view(ix.index, items)}/>))}
   </ul>
