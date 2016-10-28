@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run build:js && npm run build:css",
     "build:css": "lessc src/components/app.less docs/bundle.css",
-    "build:js": "cp node_modules/babel-polyfill/dist/polyfill.min.js docs/bundle.js && NODE_ENV=production browserify src/client/start.js -t babelify -t envify -g uglifyify >> docs/bundle.js",
+    "build:js": "cp node_modules/babel-polyfill/dist/polyfill.min.js docs/bundle.js && NODE_ENV=production browserify src/client/start.js -t babelify -g envify -g uglifyify >> docs/bundle.js",
     "lint": "eslint src test",
     "prepublish": "npm run lint && npm run build",
     "watch": "npm run watch:js & npm run watch:css & wait",
