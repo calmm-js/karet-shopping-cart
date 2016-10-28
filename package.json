@@ -26,9 +26,9 @@
     "atom.storage": "^0.3.4",
     "atom.undo": "^0.3.3",
     "karet": "^0.1.4",
-    "karet.util": "^0.2.2",
+    "karet.util": "^0.2.3",
     "kefir": "^3.6.0",
-    "kefir.atom": "^3.1.0",
+    "kefir.atom": "^3.1.1",
     "partial.lenses": "^3.9.1",
     "ramda": "^0.22.1",
     "react-dom": "^15.3.2"
