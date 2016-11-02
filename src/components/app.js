@@ -1,6 +1,6 @@
-import * as U    from "karet.util"
-import P, * as L from "partial.lenses"
-import React     from "karet"
+import * as U from "karet.util"
+import * as L from "partial.lenses"
+import React  from "karet"
 
 import CartItem    from "./cart-item"
 import Items       from "./items"
@@ -15,7 +15,7 @@ const products = [
   {id: 6, name: "Suklainen Japanilainen viihdyttäjä 37g"}
 ]
 
-export default ({state, cart = U.view(P("cart", L.define([])), state)}) =>
+export default ({state, cart = U.view(["cart", L.define([])], state)}) =>
   <div>
     <h1>Karet (toy) Shopping Cart example</h1>
     <a href="https://github.com/calmm-js/karet-shopping-cart">GitHub</a>
