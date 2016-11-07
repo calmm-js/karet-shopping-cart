@@ -26,7 +26,7 @@
     "atom.storage": "^0.3.4",
     "atom.undo": "^0.3.3",
     "karet": "^0.2.1",
-    "karet.util": "^0.3.0",
+    "karet.util": "^0.4.0",
     "kefir": "^3.6.0",
     "kefir.atom": "^4.0.0",
     "partial.lenses": "^3.9.4",
