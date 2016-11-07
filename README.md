@@ -32,10 +32,6 @@ longer
 [introduction](https://github.com/calmm-js/documentation/blob/master/introduction-to-calmm.md) to
 the approach.
 
-This example is actually a stripped down version of
-the
-[Karet Shopping Cart example](https://github.com/calmm-js/karet-shopping-cart).
-
 ### Counters are not toys!
 
 So, how does one create a Shopping Cart UI?
