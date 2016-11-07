@@ -6,6 +6,7 @@ import React     from "karet"
 import Counter from "./counter"
 
 const name = U.view("name")
+
 const count = U.staged(item =>
   U.view([L.find(R.whereEq({id: item.id})),
           L.defaults(item),

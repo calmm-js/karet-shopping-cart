@@ -6,6 +6,7 @@ import Counter from "./counter"
 import Remove  from "./remove"
 
 const name = U.view("name")
+
 const count =
   U.view([L.choose((props = {}) => L.defaults({...props, count: 0})),
           "count"])
