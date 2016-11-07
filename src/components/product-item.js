@@ -14,7 +14,7 @@ const count = U.staged(item =>
           L.normalize(R.max(0))]))
 
 export default cart => ({item}) =>
-  <li>
+  <div>
     {K(item, item => <Counter count={count(item, cart)}/>)}
     {name(item)}
-  </li>
+  </div>

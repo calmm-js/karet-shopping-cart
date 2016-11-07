@@ -11,8 +11,8 @@ const count =
           "count"])
 
 export default ({item}) =>
-  <li>
+  <div>
     <Remove removable={item}/>
     <Counter count={count(item)}/>
     {name(item)}
-  </li>
+  </div>
