@@ -77,10 +77,10 @@ Then we write a higher-order component that can display a list of items:
 
 ```jsx
 const Items = ({items, Item}) =>
-  <ul>
+  <div>
     {U.seq(items, U.indices, U.mapCached(i =>
            <Item key={i} item={U.view(i, items)}/>))}
-  </ul>
+  </div>
 ```
 
 The `Items` component is given state named `items` that is supposed to refer to
@@ -101,11 +101,11 @@ const cartCount =
           "count"])
 
 const CartItem = ({item}) =>
-  <li>
+  <div>
     <Remove removable={item}/>
     <Counter count={cartCount(item)}/>
     {cartName(item)}
-  </li>
+  </div>
 ```
 
 The `CartItem` component is designed to work as `Item` for the previous `Items`
@@ -148,10 +148,10 @@ const productCount = U.staged(item =>
           L.normalize(R.max(0))]))
 
 const ProductItem = cart => ({item}) =>
-  <li>
+  <div>
     {K(item, item => <Counter count={productCount(item, cart)}/>)}
     {productName(item)}
-  </li>
+  </div>
 ```
 
 The `ProductItem` component is also designed to work as an `Item` for the
