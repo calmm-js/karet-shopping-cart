@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run build:js && npm run build:css",
     "build:css": "lessc src/components/app.less docs/bundle.css",
-    "build:js": "cp node_modules/babel-polyfill/dist/polyfill.min.js docs/bundle.js && NODE_ENV=production browserify src/client/start.js -t babelify -g envify -g uglifyify >> docs/bundle.js",
+    "build:js": "cp node_modules/babel-polyfill/dist/polyfill.min.js docs/bundle.js && NODE_ENV=production browserify src/client/start.js -t babelify -g envify -g uglifyify | uglifyjs -m -c >> docs/bundle.js",
     "lint": "eslint src test",
     "prepublish": "npm run lint && npm run build",
     "watch": "npm run watch:js & npm run watch:css & wait",
@@ -25,11 +25,11 @@
   "dependencies": {
     "atom.storage": "^0.4.3",
     "atom.undo": "^0.4.4",
-    "karet": "^0.2.2",
+    "karet": "^0.2.3",
     "karet.util": "^0.8.0",
     "kefir": "^3.7.0",
     "kefir.atom": "^4.0.5",
-    "partial.lenses": "^7.2.0",
+    "partial.lenses": "^7.2.2",
     "ramda": "^0.23.0",
     "react-dom": "^15.4.2"
   },
@@ -45,9 +45,10 @@
     "babelify": "^7.3.0",
     "browserify": "^13.3.0",
     "envify": "^4.0.0",
-    "eslint": "^3.13.0",
+    "eslint": "^3.13.1",
     "eslint-plugin-react": "^6.9.0",
     "less": "^2.7.2",
+    "uglify-js": "^2.7.5",
     "uglifyify": "^3.0.4",
     "watch-run": "^1.2.4",
     "watchify": "^3.8.0"
