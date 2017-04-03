@@ -93,8 +93,9 @@ that by writing a component for cart items:
 const cartName = U.view("name")
 
 const cartCount =
-  U.view([L.choose((props = {}) => L.defaults({...props, count: 0})),
-          "count"])
+  U.view([L.removable("count"),
+          "count",
+          L.defaults(0)])
 
 const CartItem = ({item}) =>
   <div>
@@ -122,12 +123,21 @@ previously defined `Counter` component into the shopping cart state.
 If this is the first time you
 encounter [partial lenses](https://github.com/calmm-js/partial.lenses), then the
 definition of `cartCount` may be difficult to understand, but it is not very
-complex at all.  It works like this.  It looks at the incoming object and grabs
-all the properties as `props`.  It then uses those to return a lens that, when
-written through, will replace an object of the form `{...props, count: 0}` with
-`undefined`.  This way, when the `count` reaches `0`, the whole item gets
-removed.  After working with partial lenses for some time you will be able to
-write far more interesting lenses.
+complex at all.  It works like this:
+
+* The
+  [`L.removable("count")`](https://github.com/calmm-js/partial.lenses#L-removable) part
+  specifies that if the `count` property is removed, then so should the whole
+  item.
+* The [`"count"`](https://github.com/calmm-js/partial.lenses#L-prop) simply
+  selects the `count` property from the item.
+* The [`L.defaults(0)`](https://github.com/calmm-js/partial.lenses#L-defaults)
+  part specifies that the value is to be `0` in case there is none *and* that in
+  case the value `0` is written it should be removed.
+
+This way, when the `count` reaches `0`, the whole item gets removed.  After
+working with partial lenses for some time you will be able to write far more
+interesting lenses.
 
 ### Items to put into the cart
 

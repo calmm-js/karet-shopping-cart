@@ -8,8 +8,9 @@ import Remove  from "./remove"
 const name = U.view("name")
 
 const count =
-  U.view([L.choose((props = {}) => L.defaults({...props, count: 0})),
-          "count"])
+  U.view([L.removable("count"),
+          "count",
+          L.defaults(0)])
 
 export default ({item}) =>
   <div>
