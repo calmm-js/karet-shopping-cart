@@ -74,8 +74,8 @@ Then we write a higher-order component that can display a list of items:
 ```jsx
 const Items = ({items, Item}) =>
   <div>
-    {U.seq(items, U.indices, U.mapCached(i =>
-           <Item key={i} item={U.view(i, items)}/>))}
+    {U.seq(items,
+           U.mapElems((item, i) => <Item key={i} item={item}/>))}
   </div>
 ```
 
