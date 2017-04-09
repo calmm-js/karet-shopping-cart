@@ -6,7 +6,7 @@ import CartItem    from "./cart-item"
 import Items       from "./items"
 import ProductItem from "./product-item"
 
-const products = [
+const productsData = [
   {id: 1, name: "Sinertävä lenkki 500g"},
   {id: 2, name: "Maksainen laatikko 400g"},
   {id: 3, name: "Maitoa etäisesti muistuttava juoma 0.9l"},
@@ -14,6 +14,12 @@ const products = [
   {id: 5, name: "Niin hyvä voffeli ettei saa 55g"},
   {id: 6, name: "Suklainen Japanilainen viihdyttäjä 37g"}
 ]
+
+const products =
+  U.seq(productsData,
+        U.map(U.later(1000)),
+        U.serially,
+        U.foldPast((xs, x) => U.append(x, xs), []))
 
 export default ({state, cart = U.view(["cart", L.define([])], state)}) =>
   <div>
