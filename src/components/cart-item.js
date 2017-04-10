@@ -5,7 +5,7 @@ import React  from "karet"
 import Counter from "./counter"
 import Remove  from "./remove"
 
-const count =
+const cartCount =
   [L.removable("count"),
    "count",
    L.defaults(0)]
@@ -13,6 +13,6 @@ const count =
 export default ({item}) =>
   <div>
     <Remove removable={item}/>
-    <Counter count={U.view(count, item)}/>
+    <Counter count={U.view(cartCount, item)}/>
     {U.view("name", item)}
   </div>

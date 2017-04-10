@@ -5,7 +5,7 @@ import React  from "karet"
 
 import Counter from "./counter"
 
-const count = U.lift(item =>
+const productCount = U.lift(item =>
   [L.find(R.whereEq({id: item.id})),
    L.defaults(item),
    "count",
@@ -14,6 +14,6 @@ const count = U.lift(item =>
 
 export default cart => ({item}) =>
   <div>
-    <Counter count={U.view(count(item), cart)}/>
+    <Counter count={U.view(productCount(item), cart)}/>
     {U.view("name", item)}
   </div>
