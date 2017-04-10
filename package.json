@@ -12,7 +12,7 @@
     "prepublish": "npm run lint && npm run build",
     "watch": "npm run watch:js & npm run watch:css & npm run livereload:docs & wait",
     "watch:css": "npm run build:css && watch-run -p 'src/components/*.less' 'npm run build:css'",
-    "watch:js": "NODE_ENV=dev rollup -w -c --sourcemap inline -i src/client/debug.js -f iife -o docs/bundle.js"
+    "watch:js": "NODE_ENV=dev rollup -w -c --sourcemap inline -i src/client/start.js -f iife -o docs/bundle.js"
   },
   "repository": {
     "type": "git",

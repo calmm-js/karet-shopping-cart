@@ -5,7 +5,6 @@ import replace     from "rollup-plugin-replace"
 import uglify      from "rollup-plugin-uglify"
 
 export default {
-  moduleName: "wtf",
   plugins: [].concat(
     process.env.NODE_ENV
     ? [replace({"process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)})]
