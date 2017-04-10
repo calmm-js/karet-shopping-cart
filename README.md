@@ -90,18 +90,16 @@ We haven't actually written anything shopping cart specific yet.  Let's change
 that by writing a component for cart items:
 
 ```jsx
-const cartName = U.view("name")
-
 const cartCount =
-  U.view([L.removable("count"),
-          "count",
-          L.defaults(0)])
+  [L.removable("count"),
+   "count",
+   L.defaults(0)]
 
 const CartItem = ({item}) =>
   <div>
     <Remove removable={item}/>
-    <Counter count={cartCount(item)}/>
-    {cartName(item)}
+    <Counter count={U.view(cartCount, item)}/>
+    {U.view("name", item)}
   </div>
 ```
 
@@ -144,19 +142,17 @@ interesting lenses.
 We are nearly done!  We just need one more component for products:
 
 ```jsx
-const productName = U.view("name")
-
-const productCount = U.staged(item =>
-  U.view([L.find(R.whereEq({id: item.id})),
-          L.defaults(item),
-          "count",
-          L.defaults(0),
-          L.normalize(R.max(0))]))
+const productCount = U.lift(item =>
+  [L.find(R.whereEq({id: item.id})),
+   L.defaults(item),
+   "count",
+   L.defaults(0),
+   L.normalize(R.max(0))])
 
 const ProductItem = cart => ({item}) =>
   <div>
-    {K(item, item => <Counter count={productCount(item, cart)}/>)}
-    {productName(item)}
+    <Counter count={U.view(productCount(item), cart)}/>
+    {U.view("name", item)}
   </div>
 ```
 
@@ -165,7 +161,8 @@ previous `Items` component.  Note that `ProductItem` actually takes two curried
 arguments.  The first argument `cart` is supposed to refer to cart state.
 `ProductItem` also reuses the `Counter` component.  This time we give it another
 non-trivial lens.  The `productCount` lens is a parameterized lens that is given
-an `item` to put into the `cart`.
+an `item` to put into the `cart`.  We furthermore lift the `productCount`
+function to allow the parameter to be a time varying value.
 
 ### Putting it all together
 
@@ -173,7 +170,7 @@ We now have all the components to put together our shopping cart application.
 Here is a list of some Finnish delicacies:
 
 ```jsx
-const products = [
+const productsData = [
   {id: 1, name: "Sinertävä lenkki 500g"},
   {id: 2, name: "Maksainen laatikko 400g"},
   {id: 3, name: "Maitoa etäisesti muistuttava juoma 0.9l"},
@@ -181,6 +178,16 @@ const products = [
   {id: 5, name: "Niin hyvä voffeli ettei saa 55g"},
   {id: 6, name: "Suklainen Japanilainen viihdyttäjä 37g"}
 ]
+```
+
+Then we define an observable that produces the products one-by-one:
+
+```js
+const products =
+  U.seq(productsData,
+        U.map(U.later(1000)),
+        U.serially,
+        U.foldPast((xs, x) => U.append(x, xs), []))
 ```
 
 And, finally, here is our `App`:
