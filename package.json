@@ -26,17 +26,17 @@
   "dependencies": {
     "atom.storage": "^0.5.2",
     "atom.undo": "^0.5.3",
-    "karet": "^1.1.1",
-    "karet.util": "^0.11.5",
+    "karet": "^1.1.4",
+    "karet.util": "^0.11.6",
     "kefir": "^3.7.1",
-    "kefir.atom": "^5.3.1",
-    "partial.lenses": "^10.0.1",
+    "kefir.atom": "^5.3.3",
+    "partial.lenses": "^10.1.1",
     "ramda": "^0.23.0",
-    "react-dom": "^15.5.3"
+    "react-dom": "^15.5.4"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-eslint": "^7.2.1",
+    "babel-eslint": "^7.2.2",
     "babel-plugin-transform-react-constant-elements": "^6.23.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
