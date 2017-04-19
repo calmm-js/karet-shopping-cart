@@ -6,8 +6,9 @@ import uglify      from "rollup-plugin-uglify"
 
 export default {
   plugins: [
-    process.env.NODE_ENV &&
-      replace({"process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)}),
+    process.env.NODE_ENV && replace({
+      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
+    }),
     nodeResolve(),
     commonjs({
       include: 'node_modules/**',
