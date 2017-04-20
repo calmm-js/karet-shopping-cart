@@ -24,12 +24,12 @@
   },
   "homepage": "https://github.com/calmm-js/karet-shopping-cart#readme",
   "dependencies": {
-    "atom.storage": "^0.5.2",
+    "atom.storage": "^0.5.3",
     "atom.undo": "^0.5.3",
-    "karet": "^1.1.4",
-    "karet.util": "^0.11.6",
+    "karet": "^1.1.6",
+    "karet.util": "^0.11.7",
     "kefir": "^3.7.1",
-    "kefir.atom": "^5.3.3",
+    "kefir.atom": "^5.3.4",
     "partial.lenses": "^10.1.1",
     "ramda": "^0.23.0",
     "react-dom": "^15.5.4"
