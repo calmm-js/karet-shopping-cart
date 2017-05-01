@@ -26,11 +26,11 @@
   "dependencies": {
     "atom.storage": "^0.5.3",
     "atom.undo": "^0.5.3",
-    "karet": "^1.1.10",
-    "karet.util": "^0.11.8",
+    "karet": "^1.1.11",
+    "karet.util": "^0.12.0",
     "kefir": "^3.7.1",
     "kefir.atom": "^5.3.4",
-    "partial.lenses": "^10.2.0",
+    "partial.lenses": "^11.0.0",
     "ramda": "^0.23.0",
     "react-dom": "^15.5.4"
   },
