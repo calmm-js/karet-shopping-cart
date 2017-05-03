@@ -1,5 +1,5 @@
-import * as R from "ramda"
-import React  from "karet"
+import * as R     from "ramda"
+import * as React from "karet"
 
 export default ({count}) =>
   <span>

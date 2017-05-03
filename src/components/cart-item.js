@@ -1,6 +1,6 @@
-import * as U from "karet.util"
-import * as L from "partial.lenses"
-import React  from "karet"
+import * as L     from "partial.lenses"
+import * as React from "karet"
+import * as U     from "karet.util"
 
 import Counter from "./counter"
 import Remove  from "./remove"

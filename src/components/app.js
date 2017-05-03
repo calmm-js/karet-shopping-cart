@@ -1,6 +1,6 @@
-import * as L from "partial.lenses"
-import * as U from "karet.util"
-import React  from "karet"
+import * as L     from "partial.lenses"
+import * as React from "karet"
+import * as U     from "karet.util"
 
 import CartItem    from "./cart-item"
 import Items       from "./items"
