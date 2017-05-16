@@ -23,6 +23,7 @@ export default {
         "node_modules/kefir/dist/kefir.js": [
           "Observable",
           "Property",
+          "Stream",
           "combine",
           "concat",
           "constant",
