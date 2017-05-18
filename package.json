@@ -30,7 +30,7 @@
     "karet.util": "^0.12.2",
     "kefir": "^3.7.1",
     "kefir.atom": "^5.3.4",
-    "partial.lenses": "^11.5.0",
+    "partial.lenses": "^11.6.0",
     "ramda": "^0.23.0",
     "react-dom": "^15.5.4"
   },
