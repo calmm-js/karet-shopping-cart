@@ -26,11 +26,11 @@
   "dependencies": {
     "atom.storage": "^0.5.3",
     "atom.undo": "^0.5.3",
-    "karet": "^1.2.1",
+    "karet": "^1.2.2",
     "karet.util": "^0.12.2",
     "kefir": "^3.7.1",
     "kefir.atom": "^5.3.4",
-    "partial.lenses": "^11.6.0",
+    "partial.lenses": "^11.7.0",
     "ramda": "^0.23.0",
     "react-dom": "^15.5.4"
   },
@@ -52,7 +52,7 @@
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-replace": "^1.1.1",
-    "rollup-plugin-uglify": "^1.0.2",
+    "rollup-plugin-uglify": "^2.0.0",
     "rollup-watch": "^3.2.2",
     "watch-run": "^1.2.5"
   }
