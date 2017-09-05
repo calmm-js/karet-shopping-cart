@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/calmm-js/karet-shopping-cart.svg?branch=master)](https://travis-ci.org/calmm-js/karet-shopping-cart) [![](https://david-dm.org/calmm-js/karet-shopping-cart.svg)](https://david-dm.org/calmm-js/karet-shopping-cart) [![](https://david-dm.org/calmm-js/karet-shopping-cart/dev-status.svg)](https://david-dm.org/calmm-js/karet-shopping-cart?type=dev)
 
-Prebuilt site: [Shopping Cart](http://calmm-js.github.io/karet-shopping-cart/)
+See also [prebuilt site](http://calmm-js.github.io/karet-shopping-cart/) and [forkable version in StackBlitz](https://stackblitz.com/edit/calmm-shopping-cart).
 
 To try locally:
 
