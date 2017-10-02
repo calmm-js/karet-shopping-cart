@@ -16,7 +16,7 @@ export default {
         "node_modules/react-dom/index.js": [
           "render",
         ],
-        "node_modules/react/react.js": [
+        "node_modules/react/index.js": [
           "Component",
           "createElement"
         ],
