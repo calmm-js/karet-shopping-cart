@@ -27,10 +27,10 @@
     "atom.storage": "^0.5.3",
     "atom.undo": "^0.5.4",
     "karet": "^2.0.0",
-    "karet.util": "^0.14.0",
+    "karet.util": "^0.15.0",
     "kefir": "^3.7.4",
     "kefir.atom": "^5.4.0",
-    "partial.lenses": "^11.22.1",
+    "partial.lenses": "^12.0.0",
     "ramda": "^0.24.1",
     "react-dom": "^16.0.0"
   },
